@@ -17,7 +17,6 @@ authe = firebase.auth()
 database = firebase.database()
 
 def signIn(request):
-
     return render(request, "authentication/signIn.html")
 
 
@@ -56,6 +55,9 @@ def logout(request):
 
 def employesignUp(request):
     return render(request, 'authentication/signup.html')
+
+def postsignup(request):
+    return render(request, "authentication/signIn.html")
 
 def employeepostsignup(request):
 
