@@ -33,8 +33,6 @@ def employeepostsign(request):
     session_id = user['idToken']
     request.session['uid']=str(session_id)
     return render(request, "intro/home.html", {"e": email})
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 def ownerpostsigin(request):
     email = request.POST.get('email')
@@ -48,11 +46,6 @@ def ownerpostsigin(request):
     session_id = user['idToken']
     request.session['uid']=str(session_id)
     return render(request, "intro/home.html", {"e": email})
-=======
->>>>>>> parent of 5a43eb8... dashboard added
-=======
->>>>>>> parent of 5a43eb8... dashboard added
-
 
 def logout(request):
     auth.logout(request)
@@ -115,7 +108,7 @@ def ownerpostsignup(request):
     try:
         user = authe.create_user_with_email_and_password(email, passw)
         uid = user['localId']
-        data = {"name": name, "companyid": companyid, "department":department, "workid":[] }
+        data = {"name": name, "companyid": companyid, "department":departments, "workid":[] }
         database.child("user").child(uid).set(data)
     except:
         message = "Unable to create account try again"
