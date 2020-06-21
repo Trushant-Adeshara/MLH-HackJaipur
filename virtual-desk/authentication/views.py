@@ -35,7 +35,7 @@ def employeepostsign(request):
     request.session['uid']=str(session_id)
     return render(request, "intro/home.html", {"e": email})
 
-def ownerpostsign(request):
+def ownerpostsigin(request):
     email = request.POST.get('email')
     passw = request.POST.get('pass')
     try:
