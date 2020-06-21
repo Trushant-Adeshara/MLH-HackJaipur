@@ -33,6 +33,7 @@ def employeepostsign(request):
     session_id = user['idToken']
     request.session['uid']=str(session_id)
     return render(request, "intro/home.html", {"e": email})
+<<<<<<< HEAD
 
 def ownerpostsigin(request):
     email = request.POST.get('email')
@@ -46,6 +47,8 @@ def ownerpostsigin(request):
     session_id = user['idToken']
     request.session['uid']=str(session_id)
     return render(request, "intro/home.html", {"e": email})
+=======
+>>>>>>> parent of 5a43eb8... dashboard added
 
 
 def logout(request):
