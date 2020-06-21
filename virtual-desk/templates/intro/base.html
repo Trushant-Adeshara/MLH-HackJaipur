@@ -1,0 +1,18 @@
+<html>
+<head><title>This is Home Page</title>
+    <style>
+        div{
+           position: absolute;
+           right: 10px;
+           top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+This is home page {{e}}
+<div>
+    <button type="button" onclick="location.href='{% url 'log' %}'">Logout</button>         <!-- location.href is used to use a different protocol, here we are using firebase so we need to use its custom url-->
+</div>
+</body>
+</html>
