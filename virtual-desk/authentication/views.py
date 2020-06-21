@@ -46,7 +46,7 @@ def ownerpostsigin(request):
     print(user['idToken'])
     session_id = user['idToken']
     request.session['uid']=str(session_id)
-    return render(request, "intro/home.html", {"e": email})
+    return render(request, "dashboard/dashboard.html", {"e": email})
 
 
 def logout(request):
